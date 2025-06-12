@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow Mail - Outlook Style</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Shadow Mail</h1>
+      <p id="user-info">Welcome, <span id="user-email"></span></p>
+      <button id="logout-btn">Logout</button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside>
+      <button id="inbox-btn">Inbox</button>
+      <button id="sent-btn">Sent</button>
+      <button id="compose-btn">Compose</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <section id="email-list" class="hidden">
+        <h2>Inbox</h2>
+        <div id="emails"></div>
+      </section>
+
+      <section id="email-view" class="hidden">
+        <h2>View Email</h2>
+        <p><strong>From:</strong> <span id="view-from"></span></p>
+        <p><strong>To:</strong> <span id="view-to"></span></p>
+        <p><strong>Subject:</strong> <span id="view-subject"></span></p>
+        <p><strong>Body:</strong></p>
+        <p id="view-body"></p>
+      </section>
+
+      <section id="compose-email" class="hidden">
+        <h2>Compose Email</h2>
+        <input type="text" id="compose-to" placeholder="To">
+        <input type="text" id="compose-subject" placeholder="Subject">
+        <textarea id="compose-body" placeholder="Write your message here"></textarea>
+        <button id="send-email-btn">Send</button>
+        <p id="compose-feedback"></p>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
